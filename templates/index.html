@@ -17,7 +17,7 @@
     <div class="carousel-inner">
         {% for product in products %}
         <div class="carousel-item {% if product.pimage == 'AfricanLily.jpg' %} active {% endif %}">
-            <img src="/static/images/product/{{ product.pimage }}" class="d-block w-100" alt="...">
+            <a href="/detail/{{ product.id}}"><img src="/static/images/product/{{ product.pimage }}" class="d-block w-100" alt="..."></a>
             <div class="carousel-caption d-none d-md-block">
               <h5>{{ product.pname }}</h5>
               <p>{{ product.pdescription }}</p>
@@ -44,7 +44,7 @@
           <h5 class="card-title">{{ product.pname }}</h5>
           <p class="card-text">{{ product.pdescription }}</p>
           <p class="card-text">價格:{{ product.pprice }}</p>
-          <a href="#" class="btn btn-primary">商品資訊</a>
+          <a href="/detail/{{ product.id}}" class="btn btn-primary">商品資訊</a>
         </div>
       </div>
     </div>
