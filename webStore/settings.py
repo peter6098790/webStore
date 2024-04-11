@@ -78,8 +78,14 @@ WSGI_APPLICATION = 'webStore.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'webstore',
+        'USER': 'root',
+        'PASSWORD': 'web@Store',
+        'HOST': '',
+        'PORT': '3306',
+        'init_command': "SET sql_model='STRICT_TRANS_TABLES'", #STRICT_TRANS_TABLES': 嚴格模式,如果資料庫資料出現無效值或隔式錯誤會跳error
+        'charset':'utf8mb4',
     }
 }
 
