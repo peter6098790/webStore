@@ -13,7 +13,7 @@
         <h2>{{ product.pname }}</h2>
         <p>{{ product.pdescription }}</p>
         <h3>售價:${{ product.pprice }}</h3>
-        <button type="button" class="btn btn-primary">加入購物車</button>
+        <button type="button" class="btn btn-primary" onclick="window.location='/addtocart/add/{{ product.id }}'">加入購物車</button>
       </div>
     </div>
   </div>
